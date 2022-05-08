@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <?php include('server.php'); ?>
+<?php
+  if (isLoggedIn()) {
+  	header('location: ./index.php');
+  }
+ ?>
 <html lang="en" class="h-100">
 
 <head>
@@ -14,7 +19,7 @@
 	<meta property="og:description" content="Davur - Restaurant Bootstrap Admin Dashboard + FrontEnd" />
 	<meta property="og:image" content="https://davur.dexignzone.com/xhtml/page-error-404.html" />
 	<meta name="format-detection" content="telephone=no">
-  <title>Сур2 </title>
+  <title>Сур2 || Нэвтрэх </title>
   <!-- Favicon icon -->
   <link rel="icon" type="image/png" sizes="16x16" href="https://www.jing.fm/clipimg/full/107-1075969_free-solve-icon-download-cartoon-light-bulb-png.png">
   <link href="css/style.css" rel="stylesheet">
@@ -28,6 +33,8 @@
     border-right:1px #2bc155 solid !important;
   }
   </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <?php echo $head_form; ?>
 </head>
 
 <body class="h-100">
@@ -40,7 +47,7 @@
                             <div class="col-xl-12">
                                 <div class="auth-form">
                 									<div class="text-center mb-3">
-                										<a href="../"><img src="https://www.jing.fm/clipimg/full/107-1075969_free-solve-icon-download-cartoon-light-bulb-png.png" width="90" alt=""></a>
+                										<a href="./"><img src="https://www.jing.fm/clipimg/full/107-1075969_free-solve-icon-download-cartoon-light-bulb-png.png" width="90" alt=""></a>
                 									</div>
                                     <h4 class="text-center mb-4">Бүртгэлдээ нэвтэрнэ үү</h4>
                                     <form id="login" >
@@ -64,11 +71,19 @@
                       												</div>
                                             </div>
                                             <div class="form-group">
-                                                <a href="../forgot-password.php">Нууц үгээ мартсан?</a>
+                                                <a href="./forgot-password.php">Нууц үгээ мартсан?</a>
                                             </div>
                                         </div>
+
+
                                         <div class="text-center">
                                             <button type="submit" id="submitBtn" class="btn btn-primary btn-block">Нэвтрэх</button>
+                                            <?php if(!isset($_SESSION['access_token'])){ ?>
+                                            <button type="button" class="btn btn-outline-primary mt-4 mb-4 btn-block fb_login">
+                                            <i class="ri-facebook-circle-line"></i>
+                                              Facebook ээр үргэлжилүүлэх
+                                            </button>
+                                           <?php } ?>
                                         </div>
                                     </form>
                                     <div class="new-account mt-3">
@@ -91,6 +106,32 @@
     <script src="js/custom.min.js"></script>
     <script src="js/deznav-init.js"></script>
     <?php include('./alert.php'); ?>
+    <script type="text/javascript">
+    // $.getJSON('log.php', function(data) {
+    //             if(data.logged){
+    //               console.log(data);
+    //             $('.account').html(  '<img  src="http://graph.facebook.com/'+data.user_data.id+'/picture" alt="photo">');
+    //             }
+    //           });
+    $('.fb_login').click(function() {
+      var new_window = window.open('<?php echo @$facebook_login_url; ?>', 'facebook-popup', 'height=350,width=600')
+      var timer = setInterval(function() {
+          if(new_window.closed) {
+            location.href="set.php";
+              clearInterval(timer);
+          }
+      }, 1000);
+    });
+    $('.fb_logout').click(function() {
+      var new_window = window.open('logout.php', 'facebook-popup', 'height=350,width=600')
+      var timer = setInterval(function() {
+          if(new_window.closed) {
+            location.reload()
+              clearInterval(timer);
+          }
+      }, 1000);
+    });
+    </script>
     <script type="text/javascript">
     $('#submitBtn').prop('disabled', true);
 		$('#password').keyup(function(){

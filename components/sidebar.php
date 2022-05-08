@@ -12,11 +12,31 @@
       <li>
         <a
           class="has-arrow ai-icon"
-          href="./class.php"
+          href="./classes.php"
+          aria-expanded="false"
+        >
+          <i class="flaticon-381-television"></i>
+          <span class="nav-text">Ангиуд</span>
+        </a>
+      </li>
+      <li>
+        <a
+          class="has-arrow ai-icon"
+          href="./class_subjects.php"
           aria-expanded="false"
         >
           <i class="flaticon-381-television"></i>
           <span class="nav-text">Хичээлүүд</span>
+        </a>
+      </li>
+      <li>
+        <a
+          class="has-arrow ai-icon"
+          href="./lessons.php"
+          aria-expanded="false"
+        >
+          <i class="flaticon-381-television"></i>
+          <span class="nav-text">Сэдэвүүд</span>
         </a>
       </li>
     </ul>
