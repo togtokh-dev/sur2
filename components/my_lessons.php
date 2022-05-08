@@ -47,11 +47,17 @@
           class="row height750 dz-scroll loadmore-content"
           id="favourite-itemsContent"
         >
+        <?php
+        $sdate = date('Y-m-d', strtotime('-10 days'));
+        $results = mysqli_query($db, "SELECT * FROM lesson  where `lesson_created_date`>='$sdate' order by `lesson_created_date` ");
+        while ($row = mysqli_fetch_array($results)) {
+        ?>
+        <?php print_r($row); ?>
           <div class="col-md-4 col-xl-4 col-xxl-6 col-sm-6 mb-5">
             <div class="media mb-4">
               <a href="ecom-product-detail.html"
                 ><img
-                  src="images/dish/pic5.jpg"
+                  src="<?php echo $row['lesson_image']; ?>"
                   style="width:100%;"
                   class="rounded"
                   alt=""
@@ -79,6 +85,7 @@
               >
             </div>
           </div>
+       <?php } ?>
         </div>
         <div class="bg-white pt-3 text-center">
           <a

@@ -1,7 +1,7 @@
 <?php
   session_start();
-  include './vendor/phpmailer-6.3.0/index.php';
-  require_once './vendor/facebook-login/autoload.php';
+  include './vendor/phpmailer/index.php';
+  require_once './vendor/facebook-api/autoload.php';
 	$facebook = new \Facebook\Facebook([
 		'app_id'      => '1483601108723185',
 		'app_secret'     => '8fbb6ef9709b491f558b2499eb320d20',
