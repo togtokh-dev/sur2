@@ -12,7 +12,7 @@ $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP
 date_default_timezone_set("Asia/Ulaanbaatar");
 $time=(new DateTime())->format("Y-m-d G:i:s");
 $time_short=(new DateTime())->format("Y-m-d");
-$host_url="http://localhost/dashboard";
+$host_url="http://localhost/sur";
 if (isset($_GET['logout'])) {
   session_destroy();
   unset($_SESSION['user']);
@@ -23,7 +23,7 @@ $secret_key = '6LfqLuEZAAAAABUQ22qlA7d-V4xB9LBZrb1Hl2z6';
 $sitekey="6LfqLuEZAAAAAMf7Cce4UaHJxcCdMtN8xnRvUrGi";
 $facebook_helper = $facebook->getRedirectLoginHelper();
 $facebook_permissions = ['email'];
-$facebook_login_url = $facebook_helper->getLoginUrl('http://localhost/dashboard/api_login.php', $facebook_permissions);
+$facebook_login_url = $facebook_helper->getLoginUrl('http://localhost/sur2/api_login.php', $facebook_permissions);
 if(isset($_SESSION['user'])){
     $user_SESSION = array(
       'logged' => true,
