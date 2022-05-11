@@ -32,6 +32,7 @@ CREATE TABLE `class` (
   `class_video` varchar(500) DEFAULT NULL,
   `class_amount` double DEFAULT NULL,
   `class_sell` double DEFAULT NULL,
+  `class_created_date` datetime NOT NULL,
   PRIMARY KEY (`class_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -42,6 +43,7 @@ CREATE TABLE `class` (
 
 LOCK TABLES `class` WRITE;
 /*!40000 ALTER TABLE `class` DISABLE KEYS */;
+INSERT INTO `class` VALUES ('qwer123','490625137','Математика213213213',NULL,'&lt;p&gt;&lt;strong&gt;Сурагчид өөрийн хүсэл зорилгод нийцүүлэн суралцах боломжтой ба ойлгоогүй хоцорсон хичээлүүдээ эхлээд нөхөж үзээд дараа нь ахиулан суралцах боломжтой.&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;&lt;img alt=&quot;angel&quot; class=&quot;img-fluid&quot; src=&quot;http://localhost/sur2/vendor/edit/ckeditor/plugins/smiley/images/angel_smile.png&quot; style=&quot;height:23px; width:23px&quot; title=&quot;angel&quot; /&gt;&lt;/strong&gt;&lt;/p&gt;\r\n','','m96VzAzvb8Q',200000213213,50000123213,'0000-00-00 00:00:00'),('umgv28jax4','490625137','tg','','','','',0,0,'2022-05-10 17:06:20'),('wlu5o829qv','490625137','tg123 123','','','https://thumbs.dreamstime.com/b/imitation-transparent-background-seamless-vector-illustration-69028332.jpg','',0,0,'2022-05-10 17:08:43');
 /*!40000 ALTER TABLE `class` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-04 14:41:03
+-- Dump completed on 2022-05-11 10:27:04

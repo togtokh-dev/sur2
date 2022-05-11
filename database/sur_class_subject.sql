@@ -27,6 +27,7 @@ CREATE TABLE `class_subject` (
   `cj_name` varchar(45) DEFAULT NULL,
   `cj_image` varchar(500) DEFAULT NULL,
   `class_id` varchar(45) DEFAULT NULL,
+  `cj_created_date` datetime NOT NULL,
   PRIMARY KEY (`cj_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -37,6 +38,7 @@ CREATE TABLE `class_subject` (
 
 LOCK TABLES `class_subject` WRITE;
 /*!40000 ALTER TABLE `class_subject` DISABLE KEYS */;
+INSERT INTO `class_subject` VALUES ('regs213','10р анги','http://localhost/sur2/uploads/logo_v1_full.png','qwer123','0000-00-00 00:00:00'),('w3fj5hveq2','12 angi','','qwer123','2022-05-11 01:28:23');
 /*!40000 ALTER TABLE `class_subject` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-04 14:41:03
+-- Dump completed on 2022-05-11 10:27:04

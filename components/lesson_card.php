@@ -22,7 +22,7 @@ while ($row = mysqli_fetch_array($results)) {
          </div>
       </div>
       <div class="card-footer mt-0">
-         <a href="class.php?id=<?php echo $row['lesson_id'];  ?>" class="btn btn-primary btn-lg btn-block">Цааш харах</a>
+         <a href="lesson.php?id=<?php echo $row['lesson_id'];  ?>" class="btn btn-primary btn-lg btn-block">Цааш харах</a>
       </div>
    </div>
 </div>

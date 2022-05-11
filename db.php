@@ -12,7 +12,7 @@ $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP
 date_default_timezone_set("Asia/Ulaanbaatar");
 $time=(new DateTime())->format("Y-m-d G:i:s");
 $time_short=(new DateTime())->format("Y-m-d");
-$host_url="http://localhost/sur";
+$host_url="http://localhost/sur2";
 if (isset($_GET['logout'])) {
   session_destroy();
   unset($_SESSION['user']);
@@ -25,6 +25,7 @@ $facebook_helper = $facebook->getRedirectLoginHelper();
 $facebook_permissions = ['email'];
 $facebook_login_url = $facebook_helper->getLoginUrl('http://localhost/sur2/api_login.php', $facebook_permissions);
 if(isset($_SESSION['user'])){
+  $user_id =$_SESSION['user']['user_id'];
     $user_SESSION = array(
       'logged' => true,
       'user_data'=>$_SESSION['user'],

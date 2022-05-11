@@ -1,8 +1,6 @@
 <div class="col-xl-12">
   <div class="card">
-    <div
-      class="card-header border-0 pb-0 d-sm-flex flex-wrap d-block"
-    >
+    <div class="card-header border-0 pb-0 d-sm-flex flex-wrap d-block" >
       <div class="mb-3">
         <h4 class="card-title mb-1">Шинэ хичээлүүд</h4>
         <small class="mb-0"
@@ -48,14 +46,13 @@
           id="favourite-itemsContent"
         >
         <?php
-        $sdate = date('Y-m-d', strtotime('-10 days'));
+        $sdate = date('Y-m-d', strtotime('-30 days'));
         $results = mysqli_query($db, "SELECT * FROM lesson  where `lesson_created_date`>='$sdate' order by `lesson_created_date` ");
         while ($row = mysqli_fetch_array($results)) {
         ?>
-        <?php print_r($row); ?>
           <div class="col-md-4 col-xl-4 col-xxl-6 col-sm-6 mb-5">
             <div class="media mb-4">
-              <a href="ecom-product-detail.html"
+              <a href="lesson.php?id=<?php echo $row['lesson_id']; ?>"
                 ><img
                   src="<?php echo $row['lesson_image']; ?>"
                   style="width:100%;"
@@ -66,23 +63,12 @@
             <div class="info">
               <h5 class="mb-3">
                 <a class="text-black" href="ecom-product-detail.html"
-                  >Meidum Spicy Spagethi Italiano</a
+                  ><?php echo $row['lesson_name']; ?></a
                 >
               </h5>
               <div class="star-review fs-14 mb-3">
-                <i class="fa fa-star text-orange"></i>
-                <i class="fa fa-star text-orange"></i>
-                <i class="fa fa-star text-orange"></i>
-                <i class="fa fa-star text-gray"></i>
-                <i class="fa fa-star text-gray"></i>
-                <span class="ms-3 text-dark">451 reviews</span>
+                <span class="ms-3 text-dark"><?php echo $row['lesson_created_date']; ?></span>
               </div>
-              <a
-                href="javascript:void(0);"
-                class="btn btn-primary light btn-sm btn-rounded px-4"
-                ><i class="fa fa-heart-o me-2 scale5"></i>
-                <strong>256k</strong> Like it</a
-              >
             </div>
           </div>
        <?php } ?>
@@ -102,46 +88,41 @@
           class="row height750 dz-scroll loadmore-content"
           id="favourite-items2Content"
         >
+        <?php
+        $sdate = date('Y-m-d', strtotime('-7 days'));
+        $results = mysqli_query($db, "SELECT * FROM lesson  where `lesson_created_date`>='$sdate' order by `lesson_created_date` ");
+        while ($row = mysqli_fetch_array($results)) {
+        ?>
           <div class="col-md-4 col-xl-4 col-xxl-6 col-sm-6 mb-5">
             <div class="media mb-4">
-              <a href="ecom-product-detail.html"
+              <a href="lesson.php?id=<?php echo $row['lesson_id']; ?>"
                 ><img
-                  src="images/dish/pic5.jpg"
+                  src="<?php echo $row['lesson_image']; ?>"
                   style="width:100%;"
                   class="rounded"
                   alt=""
               /></a>
             </div>
             <div class="info">
-              <h5 class="text-black mb-3">
+              <h5 class="mb-3">
                 <a class="text-black" href="ecom-product-detail.html"
-                  >Meidum Spicy Spagethi Italiano</a
+                  ><?php echo $row['lesson_name']; ?></a
                 >
               </h5>
               <div class="star-review fs-14 mb-3">
-                <i class="fa fa-star text-orange"></i>
-                <i class="fa fa-star text-orange"></i>
-                <i class="fa fa-star text-orange"></i>
-                <i class="fa fa-star text-gray"></i>
-                <i class="fa fa-star text-gray"></i>
-                <span class="ms-3 text-dark">451 reviews</span>
+                <span class="ms-3 text-dark"><?php echo $row['lesson_created_date']; ?></span>
               </div>
-              <a
-                href="javascript:void(0);"
-                class="btn btn-primary light btn-sm btn-rounded px-4"
-                ><i class="fa fa-heart-o me-2 scale5"></i>
-                <strong>256k</strong> Like it</a
-              >
             </div>
           </div>
-        </div>
+       <?php } ?>
+       </div>
         <div class="bg-white pt-3 text-center">
           <a
             href="javascript:void(0);"
             class="btn-link dz-load-more"
             rel="ajax/favourite-items.html"
             id="favourite-items2"
-            >Илүү ихыг <i class="fa fa-angle-down ms-2 scale-2"></i
+            >Илүү ихийг <i class="fa fa-angle-down ms-2 scale-2"></i
           ></a>
         </div>
       </div>
@@ -150,38 +131,33 @@
           class="row height750 dz-scroll loadmore-content"
           id="favourite-items3Content"
         >
+        <?php
+        $sdate = date('Y-m-d', strtotime('-1 days'));
+        $results = mysqli_query($db, "SELECT * FROM lesson  where `lesson_created_date`>='$sdate' order by `lesson_created_date` ");
+        while ($row = mysqli_fetch_array($results)) {
+        ?>
           <div class="col-md-4 col-xl-4 col-xxl-6 col-sm-6 mb-5">
             <div class="media mb-4">
-              <a href="ecom-product-detail.html"
+              <a href="lesson.php?id=<?php echo $row['lesson_id']; ?>"
                 ><img
-                  src="images/dish/pic4.jpg"
+                  src="<?php echo $row['lesson_image']; ?>"
                   style="width:100%;"
                   class="rounded"
                   alt=""
               /></a>
             </div>
             <div class="info">
-              <h5 class="text-black mb-3">
+              <h5 class="mb-3">
                 <a class="text-black" href="ecom-product-detail.html"
-                  >Tuna soup spinach with himalaya salt</a
+                  ><?php echo $row['lesson_name']; ?></a
                 >
               </h5>
               <div class="star-review fs-14 mb-3">
-                <i class="fa fa-star text-orange"></i>
-                <i class="fa fa-star text-orange"></i>
-                <i class="fa fa-star text-orange"></i>
-                <i class="fa fa-star text-gray"></i>
-                <i class="fa fa-star text-gray"></i>
-                <span class="ms-3 text-dark">451 reviews</span>
+                <span class="ms-3 text-dark"><?php echo $row['lesson_created_date']; ?></span>
               </div>
-              <a
-                href="javascript:void(0);"
-                class="btn btn-primary light btn-sm btn-rounded px-4"
-                ><i class="fa fa-heart-o me-2 scale5"></i>
-                <strong>256k</strong> Like it</a
-              >
             </div>
           </div>
+       <?php } ?>
         </div>
         <div class="bg-white pt-3 text-center">
           <a
@@ -189,7 +165,7 @@
             class="btn-link dz-load-more"
             rel="ajax/favourite-items.html"
             id="favourite-items3"
-            >Илүү ихыг <i class="fa fa-angle-down ms-2 scale-2"></i
+            >Илүү ихийг <i class="fa fa-angle-down ms-2 scale-2"></i
           ></a>
         </div>
       </div>

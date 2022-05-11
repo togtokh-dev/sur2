@@ -99,7 +99,7 @@
                   >
                 </div>
                 <img
-                  src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png"
+                  src="https://devshift.biz/wp-content/uploads/2017/04/profile-icon-png-898.png"
                   width="20"
                   alt=""
                 />

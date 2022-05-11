@@ -39,10 +39,19 @@
           <span class="nav-text">Сэдэвүүд</span>
         </a>
       </li>
+      <li >
+        <a class="has-arrow ai-icon"  aria-expanded="false">
+					<i class="flaticon-381-television"></i><span class="nav-text">Admin</span>
+				</a>
+        <ul aria-expanded="false" class="mm-collapse mm-show">
+            <li><a href="admin-list.php">Хэрэглэгч нар</a></li>
+				    <li><a href="admin-class.php">Ангиуд</a></li>
+        </ul>
+      </li>
     </ul>
 
 
-    <div class="copyright"
+    <!-- <div class="copyright"
          style="
          position: fixed;
          left: 0;
@@ -53,6 +62,6 @@
         <strong>sitename.mn</strong> © 2022
       </p>
       <p>Made with <span class="heart"></span> by Лхагва Дорж</p>
-    </div>
+    </div> -->
   </div>
 </div>
