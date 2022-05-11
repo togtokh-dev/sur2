@@ -84,15 +84,18 @@
                                   <div class="col-sm-8">
                                       <div class="tab-content">
                                           <div id="v-pills-home" class="tab-pane fade active show">
-                                              <p><?php print_r( $results['lesson_video']); ?>
+                                              <p>
+                                                  <iframe width="420" height="315" class=" mt-4 mb-4 " src="https://www.youtube.com/embed/<?php print_r( $results['lesson_video']); ?>" id="preview"></iframe>
                                               </p>
                                           </div>
                                           <div id="v-pills-profile" class="tab-pane fade">
-                                              <p><?php print_r( $results['lesson_text']); ?>
+                                              <p><?php print_r(htmlspecialchars_decode( $results['lesson_text'])); ?>
                                               </p>
                                           </div>
                                           <div id="v-pills-messages" class="tab-pane fade">
-                                              <p><?php print_r( $results['lesson_file']); ?></p>
+                                              <p><iframe src="<?php print_r( $results['lesson_file']); ?>" height="200" width="300" title="Iframe Example"></iframe>
+                                                <a href="<?php print_r( $results['lesson_file']); ?>">Татах</a>
+                                                </p>
                                           </div>
                                           <div id="v-pills-settings" class="tab-pane fade">
                                               <p><?php print_r( $results['lesson_test']); ?></p>
