@@ -114,6 +114,7 @@
                                               <td><?php print_r($row['class_name']); ?></td>
                                               <td><?php print_r($row['class_amount']); ?></td>
                                               <td><?php print_r($row['class_created_date']); ?></td>
+                                              <td> <a href="#">Устгах</a> </td>
                                           </tr>
                                           <?php } ?>
                                       </tbody>

@@ -40,7 +40,7 @@
       <nav class="navbar navbar-expand">
         <div class="collapse navbar-collapse justify-content-between">
           <div class="header-left">
-            <div class="input-group search-area">
+            <!-- <div class="input-group search-area">
               <input
                 type="text"
                 class="form-control"
@@ -50,7 +50,7 @@
                 ><a href="javascript:void(0)"
                   ><i class="flaticon-381-search-2"></i></a
               ></span>
-            </div>
+            </div> -->
           </div>
 
           <ul class="navbar-nav header-right">
@@ -105,7 +105,7 @@
                 />
               </a>
               <div class="dropdown-menu dropdown-menu-right">
-                <a href="profile.php" class="dropdown-item ai-icon">
+                <a  class="dropdown-item ai-icon">
                   <svg
                     id="icon-user1"
                     xmlns="http://www.w3.org/2000/svg"

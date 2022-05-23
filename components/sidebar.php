@@ -39,6 +39,7 @@
           <span class="nav-text">Сэдэвүүд</span>
         </a>
       </li>
+      <?php if (isAdmin()) { ?>
       <li >
         <a class="has-arrow ai-icon"  aria-expanded="false">
 					<i class="flaticon-381-television"></i><span class="nav-text">Admin</span>
@@ -48,6 +49,7 @@
 				    <li><a href="admin-class.php">Ангиуд</a></li>
         </ul>
       </li>
+      <?php } ?>
     </ul>
 
 

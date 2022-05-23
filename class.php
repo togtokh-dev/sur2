@@ -203,7 +203,7 @@
                     			<div class="media mb-4 m-1 p-2 items-list-2 shadow_user">
   													<img class="img-fluid rounded me-3" width="85" src="<?php echo $row['cj_image']; ?>" alt="DexignZone">
   													<div class="media-body col-6 px-0">
-  														<h5 class="mt-0 mb-1"><a class="text-black" href="ecom-product-detail.html"><?php echo $row['cj_name']; ?></a></h5>
+  														<h5 class="mt-0 mb-1"><a class="text-black"  href="./class_subject.php?id=<?php echo $row['cj_id']; ?>"><?php echo $row['cj_name']; ?></a></h5>
   														<small class="font-w500 mb-3"><a class="text-primary" href="javascript:void(0);">10 Сэдэвтэй</a></small>
   														<span class="text-secondary me-2 fo"></span>
   													</div>

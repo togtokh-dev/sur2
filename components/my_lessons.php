@@ -43,7 +43,7 @@
       <div class="tab-pane fade show active" id="monthly1">
         <div
           class="row height750 dz-scroll loadmore-content"
-          id="favourite-itemsContent"
+
         >
         <?php
         $sdate = date('Y-m-d', strtotime('-30 days'));
@@ -62,7 +62,7 @@
             </div>
             <div class="info">
               <h5 class="mb-3">
-                <a class="text-black" href="ecom-product-detail.html"
+                <a class="text-black"  href="lesson.php?id=<?php echo $row['lesson_id']; ?>"
                   ><?php echo $row['lesson_name']; ?></a
                 >
               </h5>
@@ -86,7 +86,7 @@
       <div class="tab-pane fade" id="weekly1">
         <div
           class="row height750 dz-scroll loadmore-content"
-          id="favourite-items2Content"
+
         >
         <?php
         $sdate = date('Y-m-d', strtotime('-7 days'));
@@ -105,7 +105,7 @@
             </div>
             <div class="info">
               <h5 class="mb-3">
-                <a class="text-black" href="ecom-product-detail.html"
+                <a class="text-black"  href="lesson.php?id=<?php echo $row['lesson_id']; ?>"
                   ><?php echo $row['lesson_name']; ?></a
                 >
               </h5>
@@ -129,7 +129,7 @@
       <div class="tab-pane fade" id="today1">
         <div
           class="row height750 dz-scroll loadmore-content"
-          id="favourite-items3Content"
+
         >
         <?php
         $sdate = date('Y-m-d', strtotime('-1 days'));
@@ -158,15 +158,6 @@
             </div>
           </div>
        <?php } ?>
-        </div>
-        <div class="bg-white pt-3 text-center">
-          <a
-            href="javascript:void(0);"
-            class="btn-link dz-load-more"
-            rel="ajax/favourite-items.html"
-            id="favourite-items3"
-            >Илүү ихийг <i class="fa fa-angle-down ms-2 scale-2"></i
-          ></a>
         </div>
       </div>
     </div>

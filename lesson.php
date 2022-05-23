@@ -85,7 +85,11 @@
                                       <div class="tab-content">
                                           <div id="v-pills-home" class="tab-pane fade active show">
                                               <p>
-                                                  <iframe width="420" height="315" class=" mt-4 mb-4 " src="https://www.youtube.com/embed/<?php print_r( $results['lesson_video']); ?>" id="preview"></iframe>
+                                                <?php if ( strstr( $results['lesson_video'], 'http' ) ) {  ?>
+                                                <video controls="controls" height="720" preload="metadata" src="<?php echo $results['lesson_video']; ?>" width="1280">&nbsp;</video>
+                                                <?php }else{ ?>
+                                                      <iframe height="720" width="1280" class=" mt-4 mb-4 " src="https://www.youtube.com/embed/<?php print_r( $results['lesson_video']); ?>" id="preview"></iframe>
+                                                <?php } ?>
                                               </p>
                                           </div>
                                           <div id="v-pills-profile" class="tab-pane fade">
